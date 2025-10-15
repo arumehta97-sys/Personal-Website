@@ -3,60 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Avi Mehta — Projects</title>
+  <title>Aru Mehta — Projects</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="header">
     <div class="container nav">
-      <div class="brand"><span class="dot"></span> Avi Mehta</div>
+      <div class="brand"><span class="dot"></span> Aru Mehta</div>
       <nav class="menu" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="projects.html" class="active">Projects</a>
-        <a href="resume.html">Resume</a>
+        <a href="assets/Aru_Mehta_Resume.pdf" target="_blank" rel="noopener">Resume</a>
       </nav>
     </div>
   </header>
 
   <main class="container prose">
     <h1 style="font-size:2rem;margin-top:28px;">Selected Projects</h1>
-    <p>Below is a short selection of projects that show how I approach problems—start with the simplest useful version, add measurement, then iterate. Most of these began as small prototypes and grew as I validated impact. I prefer writing clear READMEs, keeping dependency lists minimal, and publishing reproducible notebooks or scripts. When relevant, I document failure modes and include example prompts, inputs, and outputs so others can evaluate behavior quickly.</p>
-    <p>For retrieval‑augmented generation, I’ve built compact pipelines that treat data quality as a first‑class constraint. That includes content filters, chunking tuned to the query types, and caching layers that reduce cost without sacrificing freshness. I also created lightweight evaluators that catch hallucinations and formatting drift. In reinforcement learning, I’ve explored simple decision loops that combine reflection with guardrails, prioritizing traceability over raw complexity. Across all of this, my goal is to produce tools that teammates can understand and extend without friction.</p>
-
-    <h2>What you'll find here</h2>
-    <ul class="list">
-      <li>Mini RAG service with fast indexing and cached reranking</li>
-      <li>LLM grader templates for contract review and QA tasks</li>
-      <li>Interactive D3 views for dataset exploration</li>
-      <li>Reinforcement learning “agent loop” demos</li>
-      <li>Small utilities for logs, prompts, and metrics</li>
-    </ul>
+    <p>Below are some of the Finance and Data Projects I've created while attending Northeastern</p>
 
     <section class="section">
-      <h2>Project Cards</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Contract Review Grader</h3>
-          <p>Summarization rubric + structured outputs to score clarity, risk flags, and missing sections.</p>
+      <div class="projects-grid">
+        <!-- Project 1: OVX & RBOB -->
+        <article class="project-card">
+          <header>
+            <h3 class="project-title">OVX & RBOB — Event-Driven Oil & Gas Analysis</h3>
+            <p class="project-desc">
+              Analyzed how sanctions, OPEC decisions, wars, and outbreaks relate to OVX volatility and RBOB gasoline futures; built visuals and correlation matrices to characterize short-, mid-, and long-horizon effects.
+            </p>
+          </header>
+          <ul class="skills">
+            <li>Python</li><li>Pandas</li><li>Matplotlib</li><li>Time Series</li>
+          </ul>
+          <div class="card-actions">
+            <button class="btn view-report" data-pdf="assets/OVX_RBOB_Project.pdf" aria-haspopup="dialog">View report</button>
+          </div>
         </article>
-        <article class="card">
-          <h3>RAG Playground</h3>
-          <p>Endpoint that swaps retrievers/rerankers and records latency, cost, and answer quality.</p>
+
+        <!-- Project 2: Pairs Trading -->
+        <article class="project-card">
+          <header>
+            <h3 class="project-title">Pairs Trading — Cointegration & Regime Detection</h3>
+            <p class="project-desc">
+              Built a market-neutral trading strategy using Engle–Granger tests, Z-Score spread signals, and Gaussian HMM regimes; evaluated Sharpe, drawdown, and live signal quality on ETF pairs.
+            </p>
+          </header>
+          <ul class="skills">
+            <li>Python</li><li>Statsmodels</li><li>Cointegration</li><li>HMM</li><li>Backtesting</li>
+          </ul>
+          <div class="card-actions">
+            <button class="btn view-report" data-pdf="assets/PAIRS_TRADING.pdf" aria-haspopup="dialog">View report</button>
+          </div>
         </article>
-        <article class="card">
-          <h3>Tank RL</h3>
-          <p>Deep Q‑Learning in a simple game world with curriculum stages and sanity‑check plots.</p>
+
+        <!-- Project 3: STOCKSIM -->
+        <article class="project-card">
+          <header>
+            <h3 class="project-title">STOCKSIM — Monte Carlo Stock Forecasting</h3>
+            <p class="project-desc">
+              Simulated 1,000 Geometric Brownian Motion paths per equity ticker from yfinance; estimated μ/σ, target-hit probabilities, and 95% price intervals; visualized paths and scenario bounds for investor decision support.
+            </p>
+          </header>
+          <ul class="skills">
+            <li>Python</li><li>NumPy</li><li>Matplotlib</li><li>GBM</li><li>Monte Carlo</li>
+          </ul>
+          <div class="card-actions">
+            <button class="btn view-report" data-pdf="assets/STOCKSIM.pdf" aria-haspopup="dialog">View report</button>
+          </div>
         </article>
       </div>
     </section>
 
+    <!-- PDF Modal -->
+    <dialog id="pdfModal" aria-label="Project report viewer">
+      <div class="modal-head">
+        <strong id="pdfTitle">Project Report</strong>
+        <button id="closeModal" class="btn secondary" aria-label="Close report">Close</button>
+      </div>
+      <div class="modal-body">
+        <iframe id="pdfFrame" title="PDF viewer" loading="lazy"></iframe>
+      </div>
+    </dialog>
+
     <footer id="contact">
       <div class="contact">
-        <p>Contact: <a href="mailto:avi.mehta@example.com">avi.mehta@example.com</a> ·
-           <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a> ·
-           <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></p>
+        <p>
+          <a href="mailto:arumehta97@gmail.com">Email</a> ·
+          <a href="https://www.linkedin.com/in/aru-mehta-92459b207/" target="_blank" rel="noopener">LinkedIn</a> ·
+          <a href="https://github.com/arumehta97-sys" target="_blank" rel="noopener">GitHub</a>
+        </p>
       </div>
     </footer>
   </main>
+
+  <script>
+    const modal = document.getElementById('pdfModal');
+    const frame = document.getElementById('pdfFrame');
+    const title = document.getElementById('pdfTitle');
+    const closeBtn = document.getElementById('closeModal');
+
+    document.querySelectorAll('.view-report').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const pdf = btn.getAttribute('data-pdf');
+        const name = btn.closest('.project-card').querySelector('.project-title')?.textContent || 'Project Report';
+        title.textContent = name + ' — Report';
+        frame.src = pdf;
+        modal.showModal();
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      frame.src = '';
+      modal.close();
+    });
+
+    modal.addEventListener('cancel', () => { frame.src = ''; });
+    modal.addEventListener('click', (e) => {
+      const rect = modal.getBoundingClientRect();
+      const inDialog = e.clientX >= rect.left && e.clientX <= rect.right &&
+                       e.clientY >= rect.top && e.clientY <= rect.bottom;
+      if (!inDialog) { frame.src = ''; modal.close(); }
+    });
+  </script>
 </body>
 </html>
