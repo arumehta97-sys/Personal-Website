@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avi Mehta — Projects</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand"><span class="dot"></span> Avi Mehta</div>
+      <nav class="menu" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container prose">
+    <h1 style="font-size:2rem;margin-top:28px;">Selected Projects</h1>
+    <p>Below is a short selection of projects that show how I approach problems—start with the simplest useful version, add measurement, then iterate. Most of these began as small prototypes and grew as I validated impact. I prefer writing clear READMEs, keeping dependency lists minimal, and publishing reproducible notebooks or scripts. When relevant, I document failure modes and include example prompts, inputs, and outputs so others can evaluate behavior quickly.</p>
+    <p>For retrieval‑augmented generation, I’ve built compact pipelines that treat data quality as a first‑class constraint. That includes content filters, chunking tuned to the query types, and caching layers that reduce cost without sacrificing freshness. I also created lightweight evaluators that catch hallucinations and formatting drift. In reinforcement learning, I’ve explored simple decision loops that combine reflection with guardrails, prioritizing traceability over raw complexity. Across all of this, my goal is to produce tools that teammates can understand and extend without friction.</p>
+
+    <h2>What you'll find here</h2>
+    <ul class="list">
+      <li>Mini RAG service with fast indexing and cached reranking</li>
+      <li>LLM grader templates for contract review and QA tasks</li>
+      <li>Interactive D3 views for dataset exploration</li>
+      <li>Reinforcement learning “agent loop” demos</li>
+      <li>Small utilities for logs, prompts, and metrics</li>
+    </ul>
+
+    <section class="section">
+      <h2>Project Cards</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Contract Review Grader</h3>
+          <p>Summarization rubric + structured outputs to score clarity, risk flags, and missing sections.</p>
+        </article>
+        <article class="card">
+          <h3>RAG Playground</h3>
+          <p>Endpoint that swaps retrievers/rerankers and records latency, cost, and answer quality.</p>
+        </article>
+        <article class="card">
+          <h3>Tank RL</h3>
+          <p>Deep Q‑Learning in a simple game world with curriculum stages and sanity‑check plots.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="contact">
+        <p>Contact: <a href="mailto:avi.mehta@example.com">avi.mehta@example.com</a> ·
+           <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a> ·
+           <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></p>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

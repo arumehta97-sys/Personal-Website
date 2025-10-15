@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aru Mehta Resume</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0b0c10;
+      color: #e6e6e6;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    header {
+      width: 100%;
+      padding: 16px;
+      background: rgba(17, 18, 23, 0.9);
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    main {
+      flex-grow: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 80px;
+    }
+    object {
+      width: 90%;
+      height: 80vh;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      background: #1a1a1a;
+    }
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+    }
+    a.button {
+      text-decoration: none;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #7c3aed, #06b6d4);
+      color: white;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: opacity 0.2s ease;
+    }
+    a.button:hover {
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aru Mehta Resume</h1>
+  </header>
+
+  <main>
+    <!-- Embedded PDF -->
+    <object id="resumeViewer" type="application/pdf" data="/Users/arumehta/Downloads/Aru Mehta Summer Resume (Dec26 J) (5).pdf">
+      <p>
+        Your browser does not support PDF viewing. 
+        <a href="/Users/arumehta/Downloads/Aru Mehta Summer Resume (Dec26 J) (5).pdf" download>
+          Click here to download the resume.
+        </a>
+      </p>
+    </object>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <a class="button" href="/Users/arumehta/Downloads/Aru Mehta Summer Resume (Dec26 J) (5).pdf" download>Download PDF</a>
+      <a class="button" href="/Users/arumehta/Downloads/Aru Mehta Summer Resume (Dec26 J) (5).pdf" target="_blank" rel="noopener">Open in New Tab</a>
+    </div>
+  </main>
+</body>
+</html>
